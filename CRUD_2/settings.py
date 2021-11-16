@@ -15,7 +15,7 @@ from my_settings    import DATABASES, SECRET_KEY
 
 import pymysql
 
-pymysql.install_as_MySQLdb
+pymysql.install_as_MySQLdb()
 
 SECRET_KEY = SECRET_KEY
 DATABASES = DATABASES
@@ -33,7 +33,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ '* ']
+ALLOWED_HOSTS = [ '*']
 
 
 # Application definition
@@ -45,9 +45,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'CRUD_2',
+    'owners',
     'corsheaders',
-
+    'CRUD_2',
+    
 ]
 
 MIDDLEWARE = [
@@ -85,12 +86,12 @@ WSGI_APPLICATION = 'CRUD_2.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation
